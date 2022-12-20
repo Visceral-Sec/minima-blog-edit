@@ -105,13 +105,14 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
+  font-family: $new-font-family;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($brand-color, 5%)
   }
 
   &:hover {
-    color: $text-color;
+    color:  darken($brand-color, 5%);
     text-decoration: underline;
   }
 
@@ -149,9 +150,9 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid #245942;
+  border: 1px solid $brand-opposite-color;
   border-radius: 3px;
-  background-color: #202124
+  background-color: #000000
 }
 
 code {
@@ -175,6 +176,7 @@ pre {
  * Wrapper
  */
 .wrapper {
+  
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
